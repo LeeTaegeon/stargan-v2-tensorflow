@@ -20,12 +20,12 @@ def parse_args():
     parser.add_argument('--merge', type=str2bool, default=True, help='In test phase, merge reference-guided image result or not')
     parser.add_argument('--merge_size', type=int, default=0, help='merge size matching number')
     parser.add_argument('--dataset', type=str, default='celeba_hq_gender', help='dataset_name')
-    parser.add_argument('--iteration', type=int, default=100000, help='The number of training iterations')
-    parser.add_argument('--ds_iter', type=int, default=100000, help='Number of iterations to optimize diversity sensitive loss')
+    parser.add_argument('--iteration', type=int, default=10000, help='The number of training iterations')
+    parser.add_argument('--ds_iter', type=int, default=10000, help='Number of iterations to optimize diversity sensitive loss')
 
-    parser.add_argument('--batch_size', type=int, default=2, help='The size of batch size')  # each gpu
-    parser.add_argument('--print_freq', type=int, default=1000, help='The number of image_print_freq')
-    parser.add_argument('--save_freq', type=int, default=10000, help='The number of ckpt_save_freq')
+    parser.add_argument('--batch_size', type=int, default=4, help='The size of batch size')  # each gpu
+    parser.add_argument('--print_freq', type=int, default=100, help='The number of image_print_freq')
+    parser.add_argument('--save_freq', type=int, default=1000, help='The number of ckpt_save_freq')
     parser.add_argument('--num_style', type=int, default=5, help='Number of generated images per domain during sampling')
 
     parser.add_argument('--lr', type=float, default=1e-4, help='The learning rate')
